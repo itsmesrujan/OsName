@@ -13,6 +13,8 @@ installationSetup: master/installationSetup/windows
 Note: Installation setup files can be run through bitrock installation setup
 Simply run the installer which is in master/installers/1.0/windows/.
 
+Troubleshooting: If face any issue on creating shortcut link in startup program then you need to set environment variables properly.
+
 # Linux
 
 GUI Source code: master/OsUsername
@@ -23,3 +25,5 @@ Run the bash script install.sh which is in installationSetup/Linux/GUI - for GUI
 Run the bash script install.sh which is in installationSetup/Linux/terminal - for terminal
 
 Please note that windows source code compiled with Qt 5.11(mingw compiler) and linux source code compiled with Qt 5.10(gcc compiler)
+
+Troubleshooting: If face any issue on fetching results then you may need to install the dependent packages in your linux pc if not available.

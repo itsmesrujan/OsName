@@ -2,8 +2,8 @@
     <shortName>OsName</shortName>
     <fullName>OsNameDisplay</fullName>
     <version>1.0</version>
-    <logoImage>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/appLogo.png</logoImage>
-    <splashImage>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/splashscreen.png</splashImage>
+    <logoImage>appLogo.png</logoImage>
+    <splashImage>splashscreen.png</splashImage>
     <componentList>
         <component>
             <name>default</name>
@@ -63,67 +63,70 @@
                     <platforms>windows</platforms>
                     <distributionFileList>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/D3Dcompiler_47.dll</origin>
+                            <origin>D3Dcompiler_47.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/libEGL.dll</origin>
+                            <origin>libEGL.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/libgcc_s_dw2-1.dll</origin>
+                            <origin>libgcc_s_dw2-1.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/libGLESV2.dll</origin>
+                            <origin>libGLESV2.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/libstdc++-6.dll</origin>
+                            <origin>libstdc++-6.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/libwinpthread-1.dll</origin>
+                            <origin>libwinpthread-1.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/opengl32sw.dll</origin>
+                            <origin>opengl32sw.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/Qt5Core.dll</origin>
+                            <origin>Qt5Core.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/Qt5Gui.dll</origin>
+                            <origin>Qt5Gui.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/Qt5Svg.dll</origin>
+                            <origin>Qt5Svg.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/Qt5Widgets.dll</origin>
+                            <origin>Qt5Widgets.dll</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/appLogo.png</origin>
+                            <origin>appLogo.png</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/splashscreen.png</origin>
+                            <origin>splashscreen.png</origin>
                         </distributionFile>
                         <distributionDirectory>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/iconengines</origin>
+                            <origin>iconengines</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/imageformats</origin>
+                            <origin>imageformats</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/platforms</origin>
+                            <origin>platforms</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/styles</origin>
+                            <origin>styles</origin>
                         </distributionDirectory>
                         <distributionDirectory>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/translations</origin>
+                            <origin>translations</origin>
                         </distributionDirectory>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/OsName.exe</origin>
+                            <origin>OsName.exe</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/WindowsApp.ico</origin>
+                            <origin>WindowsApp.ico</origin>
                         </distributionFile>
                         <distributionFile>
-                            <origin>C:/OnRoll_data/QtSamples/Private/idrive/windows/OSUsername/installationSetup/LinuxApp.ico</origin>
+                            <origin>LinuxApp.ico</origin>
+                        </distributionFile>
+						<distributionFile>
+                            <origin>SetStartup.bat</origin>
                         </distributionFile>
                     </distributionFileList>
                 </folder>
@@ -162,13 +165,13 @@
 				LogsPath=${SupportLogsDir.unix}
 			</text>
         </writeFile>
-
-        <!--<runProgram>
-            <program>./SetCompatible.bat</program>
+        <runProgram>
+            <program>./SetStartup.bat</program>
             <programArguments></programArguments>
-            <progressText>Setting Compatibility</progressText>
+            <!--<wrapInScript>1</wrapInScript> -->
+            <progressText>Set as startup program</progressText>
             <workingDirectory>${installdir}</workingDirectory>
-        </runProgram> -->
+        </runProgram>
     </postInstallationActionList>
     <enableRollback>1</enableRollback>
     <enableTimestamp>1</enableTimestamp>
