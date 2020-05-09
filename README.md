@@ -24,6 +24,6 @@ Run the bash script install.sh which is in installationSetup/Linux/GUI - for GUI
 
 Run the bash script install.sh which is in installationSetup/Linux/terminal - for terminal
 
-Please note that windows source code compiled with Qt 5.11(mingw compiler) and linux source code compiled with Qt 5.10(gcc compiler)
-
 Troubleshooting: If face any issue on fetching results then you may need to install the dependent packages in your linux pc if not available.
+
+Please note that windows source code compiled with Qt 5.11(mingw compiler) in windows 10 platform and linux source code compiled with Qt 5.10(gcc compiler) in ubuntu 14.04 platform.
