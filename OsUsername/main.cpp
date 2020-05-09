@@ -23,18 +23,10 @@ int main(int argc, char *argv[])
         szUsername = QString("");
     }
 #elif defined(Q_OS_LINUX)     // Linux specific code
-    unsigned int unSize = CHARLENGTH+1;
-    char name[unSize];
-    if ( NULL != getlogin_r(name, unSize) ) {
-        for (int var = 0; var < size; ++var) {
-            if ( name[var] != '\0' )
-                szUsername.append(name[var]);
-            else
-                break;
-        }
-    } else {
-        szUsername = QString("");
-    }
+    a.setWindowIcon(QIcon("LinuxApp.png"));
+    szUsername = qgetenv("USER");
+    if (szUsername.isEmpty())
+        szUsername = qgetenv("USERNAME");
 #else
     // Other than windows and linux platform
 #endif

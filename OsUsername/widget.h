@@ -9,11 +9,15 @@ using namespace std;
 #include <windows.h>
 #include <Lmcons.h>
 #elif defined(Q_OS_LINUX)
+#include <QIcon>
+#include <unistd.h>
+#include <stdio.h>
 #define CHARLENGTH 256
 #endif
 
 #include <QLabel>
 #include <QGridLayout>
+#include <QPushButton>
 #include <QDebug>
 
 #include "apputils.h"

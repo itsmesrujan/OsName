@@ -34,11 +34,16 @@ void AppUtils::setConfigInfo(QString szConfigIni,
     settings.endGroup();
 }
 
-// Save Online CWA login status
 void AppUtils::logInfo( QString szInfo )
 {
-    QString szFileName = getConfigInfo("OsNameSettings.ini", "OsNameFolderPaths", "LogsPath");
-
+    QString szFileName;
+#if defined(Q_OS_WIN)     // Windows specific code
+    szFileName = getConfigInfo("OsNameSettings.ini", "OsNameFolderPaths", "LogsPath");
+#elif defined(Q_OS_LINUX)     // Linux specific code
+    szFileName = QString("/var/log");
+#else
+    // Do nothing - other than windows and linux platform
+#endif
     QString szAppFolderName = szFileName;
     szAppFolderName.append(QDir::separator()).append("app");
     if ( !QDir(szAppFolderName).exists() )
@@ -47,7 +52,7 @@ void AppUtils::logInfo( QString szInfo )
     }
 
     szFileName.append(QDir::separator());
-    szFileName.append("OSUsernameLog.txt");
+    szFileName.append("OSUsernameLog.log");
 
     QFile file(szFileName);
     // Trying to open in WriteOnly and Text mode

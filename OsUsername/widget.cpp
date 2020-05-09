@@ -17,7 +17,7 @@ Widget::~Widget()
 
 void Widget::showUsername(QString szUsername)
 {
-    qDebug() << "szUsername: " << szUsername << endl;
+    // qDebug() << "szUsername: " << szUsername << endl;
     QString szLbl = szUsername;
     szLbl.prepend("Hi ");
 
@@ -26,5 +26,12 @@ void Widget::showUsername(QString szUsername)
     QLabel *userNameLbl = new QLabel(this);
     userNameLbl->setText(szLbl);
     userNameGLayout->addWidget(userNameLbl);
+    QPushButton *pBtn = new QPushButton(this);
+    pBtn->setText("OK");
+    connect(pBtn, SIGNAL(clicked(bool)), this, SLOT(close()));
+    userNameGLayout->addWidget(pBtn);
+    userNameGLayout->setSpacing(50);
+    userNameGLayout->setAlignment(pBtn,Qt::AlignBottom|Qt::AlignHCenter);
+
     this->setLayout(userNameGLayout);
 }
